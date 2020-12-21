@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri May  8 11:23:53 2020
 
-@author: florian
 """
-
-'''
 Write functions that calculate the nth Fibonacci number
 in O(n) time or better without using any "for" or "while" loops.
-'''
+"""
 
 n = input("Enter an integer: ")
 cache = {}
@@ -21,7 +16,7 @@ def fibonacci(i):
     global cpt
     if i in cache:
         return cache[i]
-    if (i == 1 or i == 2):
+    if i == 1 or i == 2:
         res = 1
     else:
         res = fibonacci(i - 1) + fibonacci(i - 2)

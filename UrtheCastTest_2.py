@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 11 09:15:29 2020
-
-@author: florian
-"""
-
-"""
 Write an immutable function that merges the following inputs into a single list. (Feel free to use the space below or submit a link to your work.)
 
 Inputs
