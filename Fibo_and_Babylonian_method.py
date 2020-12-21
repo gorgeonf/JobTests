@@ -7,6 +7,7 @@ Created on Fri May 22 08:09:13 2020
 """
 
 """
+        CODE IN C
 /**
  * FIBONACCI SEQUENCE
  * F(n) = F(n-1) + F(n-2)
@@ -71,32 +72,36 @@ double BabyloninanSqrt(double x) {
 """
 
 n = 17
-def Fibo1(n):
+
+
+def fibo_1(i):
     global cpt
-    if (n ==1 or n==2):
+    if i == 1 or i == 2:
         res = 1
     else:
-        res = Fibo1(n-1) + Fibo1(n-2)
+        res = fibo_1(i - 1) + fibo_1(i - 2)
     cpt += 1
     return res
 
-#	Write functions that calculate the nth Fibonacci number
-#	in O(n) time or better without using any "for" or "while" loops.
-def Fibonacci(n):
+
+# Write functions that calculate the nth Fibonacci number
+# in O(n) time or better without using any "for" or "while" loops.
+def fibonacci(i):
     if 'cache' not in locals():
         cache = {}
     global cpt
-    if n in cache:
-        return cache[n]
-    if (n == 1 or n == 2):
+    if i in cache:
+        return cache[i]
+    if i == 1 or i == 2:
         res = 1
     else:
-        res = Fibonacci(n-1) + Fibonacci(n-2)
+        res = fibonacci(i - 1) + fibonacci(i - 2)
         cpt += 1
-    cache[n] = res
+    cache[i] = res
     return res
 
+
 cpt = 0
-print(str(n) + "th term of the series: " + str(Fibo1(n)) + " in O(" + str(cpt) + ")")
+print(str(n) + "th term of the series: " + str(fibo_1(n)) + " in O(" + str(cpt) + ")")
 cpt = 0
-print(str(n) + "th term of the series: " + str(Fibonacci(n)) + " in O(" + str(cpt) + ")")
+print(str(n) + "th term of the series: " + str(fibonacci(n)) + " in O(" + str(cpt) + ")")
